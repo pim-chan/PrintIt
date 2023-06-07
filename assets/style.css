@@ -105,26 +105,40 @@ header {
 }
 
 #banner {
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; */
 	width: 100%;
 	min-height: 470px;
 	position: relative;
 }
-.banner-img {
+/* .banner-img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
-}
+} */
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+.slides_container {
+	display: flex;
+	overflow: hidden;
+	width: 100vw;
+}
+
+.slide > img {
+	position: absolute;
+	height: 470px;
+	width: 100%;
+}
+
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 #banner .arrow_left {
 	left: 10px;
@@ -135,7 +149,9 @@ header {
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
+	left: 50%;
 	bottom: 40px;
+	transform: translateX(-50%);
 	display: flex;
 }
 .dot {
@@ -159,6 +175,10 @@ header {
 	color: white;
 	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 #banner span {
 	display: block;
