@@ -53,9 +53,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
-
-}
 section {
 	margin-block: 6em;
 }
@@ -123,14 +120,18 @@ header {
 } */
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 .slides_container {
-	display: flex;
-	overflow: hidden;
-	width: 100vw;
+	position: relative;
+
 }
 
 .slide > img {
-	position: absolute;
 	height: 470px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.slide {
+	position: absolute;
 	width: 100%;
 }
 

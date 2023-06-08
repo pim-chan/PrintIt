@@ -21,31 +21,42 @@ const slidesContainer = document.querySelector(".slides_container")
 const slides = Array.from(slidesContainer.children);
 const nbSlides = slides.length;
 
-const next = document.querySelector(".arrow_right");
-const prev = document.querySelector(".arrow_left");
+const nextBtn = document.querySelector(".arrow_right");
+const prevBtn = document.querySelector(".arrow_left");
 
 const dotsNav = document.querySelector(".dots");
 const dot = Array.from(dotsNav.children);
 
-let i = 0;
+let currentSlide = 0;
 
-const bannerWidth = banner.clientWidth;
+nextBtn.addEventListener("click", function () {
+        if(currentSlide < nbSlides - 1){
+        currentSlide++;
+    } else {
+        currentSlide = 0;
+    }
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+    });
+});
 
-// function slideNext(){
-//     slide[i].classList.remove('.active'); 
+prevBtn.addEventListener("click", function () {
+    if(currentSlide > 0){
+        currentSlide--; 
+    } else {
+        currentSlide = nbSlides - 1;
+    }; 
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+    });
+});
 
-//     if(i < nbSlide - 1){
-//         i++;
-//     } else {
-//         i = 0
-//     }
 
-//     slide[i].classList.add('active')
-//     console.log(i);
-// }
 
-// next.addEventListener('click', slideNext);
-// console.log(next);
+
+
+
+
 
 
 
