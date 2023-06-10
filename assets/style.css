@@ -102,26 +102,15 @@ header {
 }
 
 #banner {
-	/* display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center; */
 	width: 100%;
 	min-height: 470px;
 	position: relative;
+	overflow: hidden;
 }
-/* .banner-img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	object-fit: cover;
-	object-position: center;
-} */
+
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 .slides_container {
 	position: relative;
-
 }
 
 .slide > img {
@@ -199,9 +188,7 @@ header {
 	padding-left:2em;
 	width: 65%;
 	margin-bottom: 1em;
-
 }
-
 #products {
 	display: flex;
 	align-items: flex-start;
@@ -264,19 +251,15 @@ header {
 #contact article, #contact div {
 	flex:1;
 }
-
-
 #contact .container {
 	flex-direction: row;
 	display: flex;
 	padding: 6em ;
 }
-
 #contact .container > div > div {
 	display: flex;
 	padding-bottom: 20px;
 }
-
 #contact h3 {
 	margin-top: 0;
 	background: url("./images/tricolor-icon.png") no-repeat left top;
