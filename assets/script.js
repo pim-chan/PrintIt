@@ -17,19 +17,18 @@ const slides = [
 	}
 ]
 
-const nbSlides = slides.length - 1;
-let currentSlide = 0;
-
 const slidesContainer = document.querySelector(".slides_container");
 const nextBtn = document.querySelector(".arrow_right");
 const prevBtn = document.querySelector(".arrow_left");
 const dotsNav = document.querySelector(".dots");
+const nbSlides = slides.length - 1;
+let currentSlide = 0;
 
 const dotCreation = () => {
     slides.forEach((element,index) => {
         const dotElement = document.createElement('div');
-        if(index === 0){dotElement.classList.add('dot_selected');}
         dotElement.classList.add('dot');
+        if(index === 0){dotElement.classList.add('dot_selected');}
         dotsNav.appendChild(dotElement);
     });
 }
@@ -57,12 +56,10 @@ const slide = (direction) => {
 }
 
 nextBtn.addEventListener("click", () => {
-    console.log('Next Slide');
     slide(1);
 });
 
 prevBtn.addEventListener("click", () => {
-    console.log('Previous Slide');
     slide(-1);
 });
 
